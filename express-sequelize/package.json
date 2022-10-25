@@ -1,0 +1,24 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "migrate": "yarn sequelize-cli init",
+    "migrate-db-first": "yarn sequelize-auto -h localhost -d db_node24 -u root -x 1234 -p 3306 --dialect mysql -o src/models -l es6",
+    "db-c-table": "yarn sequelize-cli model:generate --name user --attributes firstName:string,lastName:string,email:string"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "global": "^4.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.25.2",
+    "sequelize-auto": "^0.8.8",
+    "sequelize-cli": "^6.5.1"
+  }
+}
