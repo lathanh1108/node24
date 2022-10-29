@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "56c49c58-009d-4fa2-b330-0f915bc2e622",
+		"name": "LaTatThanh_Node24_baitapbuoi8",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5894242"
+	},
+	"item": [
+		{
+			"name": "Restaurant",
+			"item": [
+				{
+					"name": "Statistic restaurant like",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}/res/like-statistic/3",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"res",
+								"like-statistic",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like/Unlike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 6\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}/res/like/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"res",
+								"like",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Statistic restaurant rate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/res/rate-statistic/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"res",
+								"rate-statistic",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rating",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 7,\n    \"amount\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}/res/rating/2",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"res",
+								"rating",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Statistic user like",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/user/like-statistic/7",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"user",
+								"like-statistic",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Statistic user rate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/user/rate-statistic/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"user",
+								"rate-statistic",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/order/create",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"order",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api",
+			"value": "http://localhost:8080/api",
+			"type": "string"
+		}
+	]
+}
